@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "hydroNodeS3GetSensorValuesFunction",
+            "hydroNodeGetMetadataFunction",
             {
               "Fn::Join": [
                 "",
                 [
-                  "hydroNodeS3GetSensorValuesFunction",
+                  "hydroNodeGetMetadataFunction",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "amplifyiotvue3LambdaRole860d97e0",
+            "amplifyiotvue3LambdaRole055b49ab",
             {
               "Fn::Join": [
                 "",
                 [
-                  "amplifyiotvue3LambdaRole860d97e0",
+                  "amplifyiotvue3LambdaRole055b49ab",
                   "-",
                   {
                     "Ref": "env"

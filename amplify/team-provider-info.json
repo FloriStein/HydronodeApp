@@ -76,7 +76,15 @@
         "sqsRespondLambda": {
           "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
           "s3Key": "amplify-builds/sqsRespondLambda-476c6277314146467941-build.zip"
-        }
+        },
+        "cachLoadTestFunction": {},
+        "hydroNodeAthenaStoreCacheFunction": {},
+        "hydroNodeCreateNewRessourceFunction": {},
+        "hydroNodeGetAggregateFunction": {},
+        "hydroNodeGetMetadataFunction": {},
+        "hydroNodeGetSchemaFunction": {},
+        "hydroNodeGetTimeFrameFunction": {},
+        "hydroNodegetAggregatedDataFunction": {}
       },
       "storage": {
         "s3SensorData": {}

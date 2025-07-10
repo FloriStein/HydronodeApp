@@ -24,7 +24,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "regenfassMetaHandler"
+          "resourceName": "hydroNodeMetaHandler"
         },
         {
           "attributes": [
@@ -32,7 +32,39 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "hydroNodeS3GetSensorValuesFunction"
+          "resourceName": "CommandSendLambda"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeGetMetadataFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeGetTimeFrameFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodegetAggregatedDataFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeGetSchemaFunction"
         },
         {
           "attributes": [
@@ -48,6 +80,14 @@
             "Arn"
           ],
           "category": "function",
+          "resourceName": "hydroNodeGetAggregateFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
           "resourceName": "hydroNodeGetSensorDropdown"
         },
         {
@@ -56,7 +96,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "hydroNodeMetaHandler"
+          "resourceName": "hydroNodeCreateNewRessourceFunction"
         },
         {
           "attributes": [
@@ -64,7 +104,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "CommandSendLambda"
+          "resourceName": "cachLoadTestFunction"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -134,7 +174,37 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
+    "cachLoadTestFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "distanceAlertlambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeAthenaStoreCacheFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeCreateNewRessourceFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeGetAggregateFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeGetMetadataFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeGetSchemaFunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -144,17 +214,22 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
+    "hydroNodeGetTimeFrameFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "hydroNodeMetaHandler": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "hydroNodeS3GetSensorValuesFunction": {
+    "hydroNodeStoreSensorDataFunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "hydroNodeStoreSensorDataFunction": {
+    "hydroNodegetAggregatedDataFunction": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
