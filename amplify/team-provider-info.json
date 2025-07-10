@@ -1,15 +1,86 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-hydronodenewapp-dev-05e3b-authRole",
-      "UnauthRoleArn": "arn:aws:iam::717279707507:role/amplify-hydronodenewapp-dev-05e3b-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::717279707507:role/amplify-hydronodenewapp-dev-05e3b-authRole",
+      "AuthRoleName": "amplify-amplifyiotvue3-dev-41ff7-authRole",
+      "UnauthRoleArn": "arn:aws:iam::717279707507:role/amplify-amplifyiotvue3-dev-41ff7-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::717279707507:role/amplify-amplifyiotvue3-dev-41ff7-authRole",
       "Region": "eu-central-1",
-      "DeploymentBucketName": "amplify-hydronodenewapp-dev-05e3b-deployment",
-      "UnauthRoleName": "amplify-hydronodenewapp-dev-05e3b-unauthRole",
-      "StackName": "amplify-hydronodenewapp-dev-05e3b",
-      "StackId": "arn:aws:cloudformation:eu-central-1:717279707507:stack/amplify-hydronodenewapp-dev-05e3b/1c535a80-5dd4-11f0-939a-02023f8a977b",
-      "AmplifyAppId": "d3cm7l08zkachz"
+      "DeploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+      "UnauthRoleName": "amplify-amplifyiotvue3-dev-41ff7-unauthRole",
+      "StackName": "amplify-amplifyiotvue3-dev-41ff7",
+      "StackId": "arn:aws:cloudformation:eu-central-1:717279707507:stack/amplify-amplifyiotvue3-dev-41ff7/6ce6bc60-16c3-11f0-a104-0afbc87af109",
+      "AmplifyAppId": "duyhxtwy8eu3s",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-amplifyiotvue3-dev-41ff7-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-amplifyiotvue3-dev-41ff7-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "amplifyiotvue37aa4154a": {}
+      },
+      "api": {
+        "timestreamaccessapi": {}
+      },
+      "function": {
+        "storeIotData": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/storeIotData-3835716b7338664b5630-build.zip"
+        },
+        "distanceAlertlambda": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/distanceAlertlambda-4b4152354c454c50476e-build.zip"
+        },
+        "adminUserManager": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/adminUserManager-7a33587a534d6b343143-build.zip"
+        },
+        "userSubscriptionHandler": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/userSubscriptionHandler-57554f422b415630596c-build.zip"
+        },
+        "storeSensorData": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/storeSensorData-354c6c472b7573474e4f-build.zip"
+        },
+        "regenfassMetaHandler": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/regenfassMetaHandler-38774b61636f6a746674-build.zip"
+        },
+        "hydroNodeS3GetSensorValuesFunction": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/hydroNodeS3GetSensorValuesFunction-557141786e3057577632-build.zip"
+        },
+        "hydroNodeStoreSensorDataFunction": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/hydroNodeStoreSensorDataFunction-38785844745053445053-build.zip"
+        },
+        "HydroNodeGetCurrentValuesFunction": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/HydroNodeGetCurrentValuesFunction-724567334a3939414c63-build.zip"
+        },
+        "hydroNodeGetSensorDropdown": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/hydroNodeGetSensorDropdown-4d64332f676576382f55-build.zip"
+        },
+        "hydroNodeMetaHandler": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/hydroNodeMetaHandler-304738314c4a6374524b-build.zip"
+        },
+        "CommandSendLambda": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/CommandSendLambda-3366455a437941425846-build.zip"
+        },
+        "CommandReceiveLambda": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/CommandReceiveLambda-78595a6c6d4f73584574-build.zip"
+        },
+        "sqsRespondLambda": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/sqsRespondLambda-476c6277314146467941-build.zip"
+        }
+      },
+      "storage": {
+        "s3SensorData": {}
+      }
     }
   }
 }

@@ -1,1 +1,424 @@
-{}
+{
+  "api": {
+    "timestreamaccessapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "adminUserManager"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "userSubscriptionHandler"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "regenfassMetaHandler"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeS3GetSensorValuesFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "HydroNodeGetCurrentValuesFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeGetSensorDropdown"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeMetaHandler"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "CommandSendLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "amplifyiotvue37aa4154a": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_UPPERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS"
+          ],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "CommandReceiveLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "CommandSendLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "HydroNodeGetCurrentValuesFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "adminUserManager": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "amplifyiotvue37aa4154a"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "distanceAlertlambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeGetSensorDropdown": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeMetaHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeS3GetSensorValuesFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeStoreSensorDataFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "regenfassMetaHandler": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "sqsRespondLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "storeIotData": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "storeSensorData": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "userSubscriptionHandler": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_CommandReceiveLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CommandReceiveLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CommandReceiveLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CommandReceiveLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CommandSendLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CommandSendLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_CommandSendLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "CommandSendLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_HydroNodeGetCurrentValuesFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "HydroNodeGetCurrentValuesFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_HydroNodeGetCurrentValuesFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "HydroNodeGetCurrentValuesFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_adminUserManager_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "adminUserManager"
+        }
+      ]
+    },
+    "AMPLIFY_function_adminUserManager_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "adminUserManager"
+        }
+      ]
+    },
+    "AMPLIFY_function_distanceAlertlambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "distanceAlertlambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_distanceAlertlambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "distanceAlertlambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeGetSensorDropdown_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeGetSensorDropdown"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeGetSensorDropdown_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeGetSensorDropdown"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeMetaHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeMetaHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeMetaHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeMetaHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeS3GetSensorValuesFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeS3GetSensorValuesFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeS3GetSensorValuesFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeS3GetSensorValuesFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeStoreSensorDataFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeStoreSensorDataFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeStoreSensorDataFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeStoreSensorDataFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_regenfassMetaHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "regenfassMetaHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_regenfassMetaHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "regenfassMetaHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_sqsRespondLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sqsRespondLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_sqsRespondLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "sqsRespondLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_storeIotData_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "storeIotData"
+        }
+      ]
+    },
+    "AMPLIFY_function_storeIotData_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "storeIotData"
+        }
+      ]
+    },
+    "AMPLIFY_function_storeSensorData_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "storeSensorData"
+        }
+      ]
+    },
+    "AMPLIFY_function_storeSensorData_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "storeSensorData"
+        }
+      ]
+    },
+    "AMPLIFY_function_userSubscriptionHandler_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userSubscriptionHandler"
+        }
+      ]
+    },
+    "AMPLIFY_function_userSubscriptionHandler_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "userSubscriptionHandler"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "s3SensorData": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}
