@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-hydronodenewapp-dev-05e3b-authRole",
+      "UnauthRoleArn": "arn:aws:iam::717279707507:role/amplify-hydronodenewapp-dev-05e3b-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::717279707507:role/amplify-hydronodenewapp-dev-05e3b-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-hydronodenewapp-dev-05e3b-deployment",
+      "UnauthRoleName": "amplify-hydronodenewapp-dev-05e3b-unauthRole",
+      "StackName": "amplify-hydronodenewapp-dev-05e3b",
+      "StackId": "arn:aws:cloudformation:eu-central-1:717279707507:stack/amplify-hydronodenewapp-dev-05e3b/1c535a80-5dd4-11f0-939a-02023f8a977b",
+      "AmplifyAppId": "d3cm7l08zkachz"
+    }
+  }
+}
