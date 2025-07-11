@@ -67,7 +67,7 @@ export function override(resources: AmplifyApiRestResourceStackTemplate) {
                 default: {
                     statusCode: '200',
                     responseParameters: {
-                        'method.response.header.Access-Control-Allow-Origin': "'http://localhost:5173'",
+                        'method.response.header.Access-Control-Allow-Origin': "'*'",
                         'method.response.header.Access-Control-Allow-Methods': "'GET,POST,PUT,DELETE,OPTIONS'",
                         'method.response.header.Access-Control-Allow-Headers': "'Content-Type,Authorization'",
                     },
