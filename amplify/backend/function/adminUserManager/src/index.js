@@ -21,7 +21,7 @@ const {
 
 
 const client = new CognitoIdentityProviderClient({ region: 'eu-central-1' });
-const USER_POOL_ID = process.env.USER_POOL_ID || process.env.AUTH_AMPLIFYIOTVUE37AA4154A_USERPOOLID;
+const USER_POOL_ID = process.env.USER_POOL_ID;
 const snsClient = new SNSClient({ region: 'eu-central-1' });
 const SNS_TOPIC_ARN = 'arn:aws:sns:eu-central-1:717279707507:distance-alert-topic';
 const sesClient = new SESClient({ region: 'eu-central-1' });
@@ -31,12 +31,23 @@ exports.handler = async (event) => {
     const claims = event.requestContext?.authorizer?.claims || {};
     const groups = claims['cognito:groups'] || [];
     const isAdmin = Array.isArray(groups) ? groups.includes('Admin') : groups === 'Admin';
+    const { httpMethod, pathParameters, body } = event;
+
+    if (httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+                'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS'
+            },
+            body: ''
+        };
+    }
 
     if (!isAdmin) {
         return respond(403, { error: 'Nur Admins erlaubt' });
     }
-
-    const { httpMethod, pathParameters, body } = event;
 
     try {
         if (httpMethod === 'GET') {
@@ -160,7 +171,8 @@ function respond(code, body) {
         body: JSON.stringify(body),
         headers: {
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': '*'
+            'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type,Authorization'
         }
     };
 }

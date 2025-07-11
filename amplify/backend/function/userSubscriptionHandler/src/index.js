@@ -14,6 +14,18 @@ exports.handler = async (event) => {
     const claims = event.requestContext?.authorizer?.claims || {}
     const email = claims.email
 
+    if (httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 200,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type,Authorization',
+                'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS'
+            },
+            body: ''
+        };
+    }
+
     if (!email) return respond(401, { error: 'Nicht authentifiziert oder keine E-Mail vorhanden' })
 
     try {
@@ -88,7 +100,8 @@ function respond(code, body) {
         body: JSON.stringify(body),
         headers: {
             'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Headers': '*'
+            'Access-Control-Allow-Methods': 'GET,POST,DELETE,OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type,Authorization'
         }
-    }
+    };
 }

@@ -19,6 +19,7 @@
     "@aws-sdk/client-iot-data-plane": "^3.821.0",
     "@aws-sdk/client-s3": "^3.797.0",
     "@aws-sdk/client-secrets-manager": "^3.810.0",
+    "@aws-sdk/client-ses": "^3.844.0",
     "@aws-sdk/client-sns": "^3.806.0",
     "@aws-sdk/client-sqs": "^3.821.0",
     "@aws-sdk/client-timestream-query": "^3.787.0",
