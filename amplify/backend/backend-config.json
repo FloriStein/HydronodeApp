@@ -105,6 +105,14 @@
           ],
           "category": "function",
           "resourceName": "cachLoadTestFunction"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "hydroNodeUserManager"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -225,6 +233,11 @@
       "service": "Lambda"
     },
     "hydroNodeStoreSensorDataFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "hydroNodeUserManager": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
@@ -517,6 +530,22 @@
         {
           "category": "function",
           "resourceName": "hydroNodeStoreSensorDataFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeUserManager_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeUserManager"
+        }
+      ]
+    },
+    "AMPLIFY_function_hydroNodeUserManager_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "hydroNodeUserManager"
         }
       ]
     },

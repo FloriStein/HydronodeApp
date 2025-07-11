@@ -1,16 +1,6 @@
 {
   "version": 1,
   "paths": {
-    "/admin/users": {
-      "name": "/admin/users",
-      "lambdaFunction": "adminUserManager",
-      "permissions": {
-        "setting": "private",
-        "auth": [
-          "read"
-        ]
-      }
-    },
     "/admin/users/{username}": {
       "name": "/admin/users/{username}",
       "lambdaFunction": "adminUserManager",
@@ -252,6 +242,19 @@
       "permissions": {
         "setting": "private",
         "auth": [
+          "update",
+          "delete"
+        ]
+      }
+    },
+    "/admin/users": {
+      "name": "/admin/users",
+      "lambdaFunction": "hydroNodeUserManager",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read",
           "update",
           "delete"
         ]

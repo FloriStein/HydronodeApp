@@ -108,6 +108,10 @@
         "hydroNodegetAggregatedDataFunction": {
           "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
           "s3Key": "amplify-builds/hydroNodegetAggregatedDataFunction-49543871624a4f7a5575-build.zip"
+        },
+        "hydroNodeUserManager": {
+          "deploymentBucketName": "amplify-amplifyiotvue3-dev-41ff7-deployment",
+          "s3Key": "amplify-builds/hydroNodeUserManager-4c766a34784b7a706673-build.zip"
         }
       },
       "storage": {
